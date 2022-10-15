@@ -10,7 +10,8 @@ use App\Models\Category;
 class BlogController extends Controller
 {
     public function create(){
-        return view('backend.blog.create');
+        $data=Category::all();
+        return view('backend.blog.create',compact('data'));
     }
 
 public function store(Request $request){
@@ -23,6 +24,7 @@ public function store(Request $request){
     $data=new Blog();
     $data->title=$request->title;
     $data->description=$request->description;
+    $data->category_id=$request->category_id;
     if($request->hasFile('image'))
     {
         $file=$request->image;

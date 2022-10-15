@@ -56,11 +56,22 @@
                     <input type="number" class="form-control">
                   </div>
                 </div> -->
-                <div class="row mb-3">
-                    <label for="image">image:</label>
-                    <input type="file" class="form-control" id="image" placeholder="image" name="image"><br>
-                </div>
 
+
+
+                <div class="row mb-3">
+                  <label for="image">image:</label>
+                  <input type="file" class="form-control" id="image" placeholder="image" name="image"><br>
+              </div>
+
+              <div class="row mb-3">
+                <select name="category_id"id="cars">
+                  @foreach($data as $d)
+                      <option value="{{$d->id}}">{{$d->title}}</option>
+                      @endforeach
+                   </select>
+
+            </div>
 
                 <div class="row mb-3">
                   <label class="col-sm-2 col-form-label"></label>
