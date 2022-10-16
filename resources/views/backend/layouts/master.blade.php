@@ -319,15 +319,12 @@
             </a>
           </li>
           <li>
-           
+
           </li>
         </ul>
       </li><!-- End Charts Nav -->
 
     <!-- End Icons Nav -->
-
-
-
     </ul>
 
   </aside><!-- End Sidebar-->

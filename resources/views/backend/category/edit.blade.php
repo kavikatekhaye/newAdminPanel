@@ -26,14 +26,14 @@
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-9">
 
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">General Form Elements</h5>
 
               <!-- General Form Elements -->
-            
+
                 <form action="{{route('admin.category.update',$data->id)}}"method="POST"enctype="multipart/form-data">
                     @csrf
                 <div class="row mb-3">

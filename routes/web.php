@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\FrontController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,9 @@ use App\Http\Controllers\Admin\CategoryController;
 
 Route::get('/', function () {
     return view('welcome');
+
 });
+Route::get('/',[FrontController::class,'index']);
 Route::get('admin/dashboard',[DashboardController::class,'index']);
 
 
@@ -37,3 +40,4 @@ Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name(
 Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update');
 Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete');
 
+Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail');

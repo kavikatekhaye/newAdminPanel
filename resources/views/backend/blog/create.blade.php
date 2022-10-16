@@ -27,7 +27,7 @@
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-9">
 
           <div class="card">
             <div class="card-body">
@@ -37,6 +37,7 @@
 
                 <form action="{{url('admin/blog/store')}}"method="POST"enctype="multipart/form-data">
                     @csrf
+
                 <div class="row mb-3">
                     <label for="title">Title:</label>
                     <input type="text" class="form-control" id="title" placeholder="title" name="title" value="{{old('title')}}"> <br>
@@ -50,7 +51,7 @@
                 <div class="row mb-3">
                     <label for="description">Description:</label>
                     <textarea class="form-control" name="description" id="description" cols="30"placeholder="Write something.." value="{{old('description')}}">{!!old('description')!!}</textarea> <br>
-                <!-- <div class="row mb-3">
+                </div><!-- <div class="row mb-3">
                   <label for="inputNumber" class="col-sm-2 col-form-label">Number</label>
                   <div class="col-sm-10">
                     <input type="number" class="form-control">
@@ -87,6 +88,7 @@
                             console.error( error );
                         } );
                 </script>
+
 
               </form>
 
