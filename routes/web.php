@@ -28,22 +28,22 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::get('/',[FrontController::class,'index']);
-Route::get('admin/dashboard',[DashboardController::class,'index']);
+Route::get('admin/dashboard',[DashboardController::class,'index'])->middleware('auth');
 
 
-Route::get('admin/blog/create',[BlogController::class,'create'])->name('admin.blog.create');
-Route::post('admin/blog/store',[BlogController::class,'store'])->name('admin.blog.store');
-Route::get('admin/blog/table',[BlogController::class,'table'])->name('admin.blog.table');
-Route::get('admin/blog/edit/{id}',[BlogController::class,'edit'])->name('admin.blog.edit');
-Route::post('admin/blog/update/{id}',[BlogController::class,'update'])->name('admin.blog.update');
-Route::get('admin/blog/delete/{id}',[BlogController::class,'delete'])->name('admin.blog.delete');
+Route::get('admin/blog/create',[BlogController::class,'create'])->name('admin.blog.create')->middleware('auth');
+Route::post('admin/blog/store',[BlogController::class,'store'])->name('admin.blog.store')->middleware('auth');
+Route::get('admin/blog/table',[BlogController::class,'table'])->name('admin.blog.table')->middleware('auth');
+Route::get('admin/blog/edit/{id}',[BlogController::class,'edit'])->name('admin.blog.edit')->middleware('auth');
+Route::post('admin/blog/update/{id}',[BlogController::class,'update'])->name('admin.blog.update')->middleware('auth');
+Route::get('admin/blog/delete/{id}',[BlogController::class,'delete'])->name('admin.blog.delete')->middleware('auth');
 
 
-route::get('admin/category/create',[CategoryController::class,'create'])->name('admin.category.create');
-Route::post('admin/category/store',[CategoryController::class,'store'])->name('admin.category.store');
-Route::get('admin/category/table',[CategoryController::class,'table'])->name('admin.category.table');
-Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit');
-Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update');
-Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete');
+route::get('admin/category/create',[CategoryController::class,'create'])->name('admin.category.create')->middleware('auth');
+Route::post('admin/category/store',[CategoryController::class,'store'])->name('admin.category.store')->middleware('auth');
+Route::get('admin/category/table',[CategoryController::class,'table'])->name('admin.category.table')->middleware('auth');
+Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name('admin.category.edit')->middleware('auth');
+Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update')->middleware('auth');
+Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete')->middleware('auth');
 
-Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail');
+Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail')->middleware('auth');
