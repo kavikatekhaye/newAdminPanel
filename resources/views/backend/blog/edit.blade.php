@@ -6,7 +6,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Form Elements</h1>
+      <h1>Edit Blog Elements</h1>
       @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -18,9 +18,10 @@
     @endif
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Forms</li>
-          <li class="breadcrumb-item active">Elements</li>
+          <li class="breadcrumb-item"><a href="index.html">view</a></li>
+          <li class="breadcrumb-item">backend</li>
+          <li class="breadcrumb-item">blog</li>
+          <li class="breadcrumb-item active">edit</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -31,7 +32,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">General Form Elements</h5>
+              <h5 class="card-title">Edit Blog </h5>
 
               <!-- General Form Elements -->
 
@@ -60,6 +61,7 @@
                     <label for="image">image:</label>
                     <input type="file" class="form-control" id="image" placeholder="image" name="image"><br>
                 </div>
+
 
 
                 <div class="row mb-3">

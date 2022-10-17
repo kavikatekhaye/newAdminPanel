@@ -17,10 +17,16 @@ use App\Http\Controllers\FrontController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
 Route::get('/',[FrontController::class,'index']);
 Route::get('admin/dashboard',[DashboardController::class,'index']);
 

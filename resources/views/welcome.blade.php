@@ -28,7 +28,7 @@
                         <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Blog</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/login">Dashboard</a></li>
                     </ul>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                                     <a class="btn btn-primary" href="{{route('detail',$d->id)}}">Read more →</a>
                                 </div>
                             </div>
-                            
+
                         </div>
                         @endforeach
                     </div>
@@ -137,7 +137,7 @@
         </div>
         <!-- Footer-->
         <footer class="py-5 bg-dark">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy;Tech2Electronics</p></div>
         </footer>
         <!-- Bootstrap core JS-->
         <script src="{{asset('uploads/'.$d->image)}}"></script>

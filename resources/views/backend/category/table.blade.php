@@ -9,7 +9,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>General Tables</h1>
+      <h1>Category Table</h1>
       @if (session()->has('msg'))
       <div class="alert alert-success">
          {{session()->get('msg')}}
@@ -18,9 +18,10 @@
       @endif
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Tables</li>
-          <li class="breadcrumb-item active">General</li>
+          <li class="breadcrumb-item"><a href="index.html">view</a></li>
+          <li class="breadcrumb-item">backend</li>
+          <li class="breadcrumb-item">category</li>
+          <li class="breadcrumb-item active">table</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -31,7 +32,7 @@
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Default Table</h5>
+              <h5 class="card-title"></h5>
 
               <!-- Default Table -->
               <table class="table">
