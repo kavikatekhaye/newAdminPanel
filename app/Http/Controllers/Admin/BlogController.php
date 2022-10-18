@@ -43,8 +43,9 @@ public function table(){
 }
 
 public function edit($id){
-    $data=Blog::find($id);
-    return view('backend.blog.edit',compact('data'));
+    $data=Blog::with('category')->find($id);
+    $categories=Category::all();
+    return view('backend.blog.edit',compact('data','categories'));
 }
 
 public function update(Request $request,$id){$validated = $request->validate([

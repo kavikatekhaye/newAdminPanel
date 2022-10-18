@@ -61,6 +61,12 @@
                     <label for="image">image:</label>
                     <input type="file" class="form-control" id="image" placeholder="image" name="image"><br>
                 </div>
+<select name="category_id" id="cars">
+    @foreach ($categories as $cat)
+    <option value="{{$cat->id}}"{{$cat->id==$data->category_id ?'selected':''}}>{{$cat->title}} </option>
+
+    @endforeach
+</select>
 
 
 
