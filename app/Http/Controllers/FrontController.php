@@ -23,4 +23,19 @@ class FrontController extends Controller
         // dd($data);
         return view('frontend.detail',compact('data','categories'));
     }
+
+
+
+    public function view($id){
+        $categories = Category::all();
+        $data=Blog::where('category_id',$id)->get();
+        return view('frontend.dashboard',compact('data','categories'));
+
+
+
+    }
+
+    public function master(){
+        return view('master');
+    }
 }

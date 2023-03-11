@@ -51,7 +51,7 @@ public function edit($id){
 public function update(Request $request,$id){$validated = $request->validate([
     'title' => 'required',
     'description' => 'required',
-    'image' => 'required',
+    // 'image' => 'required',
 
 ]);
     $data=Blog::find($id);

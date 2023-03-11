@@ -59,7 +59,6 @@
                     <td><a href="{{route('admin.blog.edit',$d->id)}}"><button type="Edit" class="btn btn-success">edit</button></td>
                     <td><a href="{{route('admin.blog.delete',$d->id)}}"><button type="delete" class="btn btn-danger">delete</button></td>
                   </tr>
-
                   @endforeach
                 </tbody>
 
@@ -74,3 +73,5 @@
     </section>
 
   </main>
+
+

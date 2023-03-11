@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/',[FrontController::class,'index']);
+Route::get('/',[FrontController::class,'index'])->name('index');
 Route::get('admin/dashboard',[DashboardController::class,'index'])->middleware('auth');
 
 
@@ -46,4 +46,9 @@ Route::get('admin/category/edit/{id}',[CategoryController::class,'edit'])->name(
 Route::post('admin/category/update/{id}',[CategoryController::class,'update'])->name('admin.category.update')->middleware('auth');
 Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->name('admin.category.delete')->middleware('auth');
 
-Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail')->middleware('auth');
+Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail');
+Route::get('/view/{id}',[FrontController::class,'view'])->name('view');
+
+    // Route::fallback(function(){return "Route Nahi  Delas n bhau";});
+
+    Route::get('master',[FrontController::class,'master']);
