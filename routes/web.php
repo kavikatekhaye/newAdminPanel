@@ -52,3 +52,4 @@ Route::get('/view/{id}',[FrontController::class,'view'])->name('view');
     // Route::fallback(function(){return "Route Nahi  Delas n bhau";});
 
     Route::get('master',[FrontController::class,'master']);
+

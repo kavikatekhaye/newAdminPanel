@@ -9,6 +9,7 @@
                 <header class="mb-4">
                     <!-- Post title-->
                     <h1 class="fw-bolder mb-1">{{$data->title}}</h1>
+                    <h6 class="fw-bolder mb-1">Total views={{$data->views}}</h6>
                     <!-- Post meta content-->
                     <div class="text-muted fst-italic mb-2">Posted on {{$data->created_at}}</div>
                     <!-- Post categories-->
@@ -25,7 +26,7 @@
         <!-- Side widgets-->
         <div class="col-lg-4">
             <!-- Search widget-->
-            {{-- <div class="card mb-4">
+             {{-- <div class="card mb-4">
                 <div class="card-header">Search</div>
                 <div class="card-body">
                     <div class="input-group">
@@ -35,8 +36,9 @@
                 </div>
             </div> --}}
             <!-- Categories widget-->
+
             <div class="card mb-4">
-                <div class="card-header">Categories</div>
+                <div class="card-header">Categories  ({{$categories->count()}})</div>
                 <div class="card-body">
                     <div class="row">
                         @foreach ($categories as $c)
