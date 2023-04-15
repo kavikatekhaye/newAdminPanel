@@ -53,3 +53,4 @@ Route::get('/view/{id}',[FrontController::class,'view'])->name('view');
 
     Route::get('master',[FrontController::class,'master']);
 
+// Kavi

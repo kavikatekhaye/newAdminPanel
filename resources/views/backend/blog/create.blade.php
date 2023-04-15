@@ -72,7 +72,6 @@
                       <option value="{{$d->id}}">{{$d->title}}</option>
                       @endforeach
                    </select>
-
             </div>
 
                 <div class="row mb-3">
