@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\FrontController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -49,8 +50,10 @@ Route::get('admin/category/delete/{id}',[CategoryController::class,'delete'])->n
 Route::get('/detail/{id}',[FrontController::class,'detail'])->name('detail');
 Route::get('/view/{id}',[FrontController::class,'view'])->name('view');
 
-    // Route::fallback(function(){return "Route Nahi  Delas n bhau";});
+     Route::fallback(function(){return "Route Nahi  Delas n bhau";});
 
     Route::get('master',[FrontController::class,'master']);
 
 // Kavi
+Route::get('form',[DashboardController::class,'form'])->name('form')->middleware('auth');
+Route::post('form/update/{id}',[DashboardController::class,'form_update'])->name('form.update')->middleware('auth');

@@ -209,9 +209,13 @@
         </li><!-- End Messages Nav -->
 
         <li class="nav-item dropdown pe-3">
+            <?php
+            $user= Auth::user();
+            ?>
+            {{-- {{$user=Auth::user()->image ??''}} --}}
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="{{asset('img/profile-img.jpg')}}" alt="Profile" class="rounded-circle">
+            <img src="{{ asset('uploads/' . $user->image) }}" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">{{Auth::user()->name ??''}}</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -225,7 +229,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="{{route('form')}}">
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
@@ -291,7 +295,7 @@
         </a>
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="http://127.0.0.1:8000/admin/blog/create">
+            <a href="{{route('admin.blog.create')}}">
               <i class="bi bi-circle"></i><span>Add Blog </span>
             </a>
           </li>
@@ -323,6 +327,21 @@
           </li>
         </ul>
       </li><!-- End Charts Nav -->
+
+      <li class="nav-item">
+        <a href="{{ route('logout') }}" class="nav-link ">
+        {{-- <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href=""> --}}
+          <i class="bi bi-bar-calendar-alt"></i><span>Logout</span><i class=""></i>
+        </a>
+        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+
+          <li>
+
+          </li>
+        </ul>
+      </li><!-- End Charts Nav -->
+
 
     <!-- End Icons Nav -->
     </ul>

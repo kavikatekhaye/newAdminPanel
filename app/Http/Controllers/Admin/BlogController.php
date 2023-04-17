@@ -38,7 +38,7 @@ return redirect()->route('admin.blog.table')->with('msg','Data Inserted!Successf
 }
 
 public function table(){
-    $data=Blog::all();
+    $data=Blog::paginate(10);
     return view('backend.blog.table',compact('data'));
 }
 
