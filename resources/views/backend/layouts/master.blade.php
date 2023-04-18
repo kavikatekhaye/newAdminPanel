@@ -210,7 +210,7 @@
 
         <li class="nav-item dropdown pe-3">
             <?php
-            $user= Auth::user();
+            $user= Auth::User();
             ?>
             {{-- {{$user=Auth::user()->image ??''}} --}}
 

@@ -9,9 +9,10 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
+// use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 use Illuminate\View\View;
+use Hash;
 
 
 class RegisteredUserController extends Controller
@@ -46,7 +47,7 @@ class RegisteredUserController extends Controller
         $user = new  User();
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->password);
         if ($request->hasFile('image')) {
             $file = $request->image;
             $extension = $file->getClientOriginalExtension();
